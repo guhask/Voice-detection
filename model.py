@@ -1,5 +1,3 @@
-import torch
-import torch.nn as nn
 import numpy as np
 import librosa
 from typing import Tuple
@@ -8,8 +6,7 @@ class VoiceDetectionModel:
     def __init__(self):
         """Initialize lightweight model"""
         print("Loading lightweight voice detector...")
-        self.device = torch.device("cpu")
-        print(f"Model loaded on {self.device}")
+        print("Model ready!")
     
     def predict(self, waveform: np.ndarray, sr: int) -> Tuple[str, float, str]:
         """Predict using heuristics only"""

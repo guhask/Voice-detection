@@ -22,7 +22,7 @@ This AI-powered voice detection system analyzes acoustic features to classify au
 
 ## 🚀 Live Demo
 
-**API Endpoint**: `https://voice-detection-production-8145.up.railway.app/`
+**API Endpoint**: `https://voice-detection-production-8145.up.railway.app/api/voice-detection`
 
 **Interactive Docs**: `https://voice-detection-production-8145.up.railway.app/docs`
 
@@ -100,7 +100,7 @@ x-api-key: YOUR_API_KEY_HERE
 
 ### cURL
 ```bash
-curl -X POST https://voice-detection-production-8145.up.railway.app/ \
+curl -X POST https://voice-detection-production-8145.up.railway.app/api/voice-detection \
   -H "Content-Type: application/json" \
   -H "x-api-key: YOUR_API_KEY_HERE" \
   -d '{
@@ -121,7 +121,7 @@ with open("sample.mp3", "rb") as f:
 
 # Make request
 response = requests.post(
-    "https://voice-detection-production-8145.up.railway.app/",
+    "https://voice-detection-production-8145.up.railway.app/api/voice-detection",
     headers={
         "Content-Type": "application/json",
         "x-api-key": "YOUR_API_KEY_HERE"
@@ -146,7 +146,7 @@ const audioBuffer = fs.readFileSync('sample.mp3');
 const audioBase64 = audioBuffer.toString('base64');
 
 // Make request
-axios.post('https://voice-detection-production-8145.up.railway.app/', {
+axios.post('https://voice-detection-production-8145.up.railway.app/api/voice-detection', {
   language: 'English',
   audioFormat: 'mp3',
   audioBase64: audioBase64
